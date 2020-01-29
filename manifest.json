@@ -1,0 +1,25 @@
+{
+    "name" : "9 + 10 = 21",
+    "description" : "a meme",
+    "version" : "0.1",
+    "manifest_version" : 2,
+    "content_scripts" : [
+        {
+            "matches" : ["*://*/*"],
+            "js" : ["main.js", "jquery.js"],
+            "match_about_blank" : true
+        }
+    ],
+    "browser_action" : {
+        "default_icon" : {
+            "16" : "img/21-16.png",
+            "21" : "img/21-21.png",
+            "24" : "img/21-24.png",
+            "32" : "img/21-32.png",
+            "64" : "img/21-64.png"
+        }, 
+        "default_title" : "9 + 10 = 21",
+        "default_popup" : "html/popup.html"
+    },
+    "permissions" : ["storage"]
+}
