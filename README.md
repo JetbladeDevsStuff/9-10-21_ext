@@ -10,4 +10,4 @@ It has a bigger settings menu in the chrome://extentions page*
 It's a thing
 ## 
 
-lines with * mean that feature is in development
+*lines with \* mean that feature is in development*
