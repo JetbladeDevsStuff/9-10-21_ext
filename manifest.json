@@ -19,7 +19,11 @@
             "64" : "img/21-64.png"
         }, 
         "default_title" : "9 + 10 = 21",
-        "default_popup" : "html/popup.html"
+        "default_popup" : "html/popup/popup.html"
     },
+    "options_ui": {
+        "page": "html/settings/settings.html",
+        "open_in_tab": false
+      },
     "permissions" : ["storage"]
 }

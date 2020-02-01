@@ -6,10 +6,10 @@ html {
     font-size : 18px;     
 }
 
-.choice, .save {
+.choice, .save, .saveText, .textBox {
     font-size : 10px;
 }
 
-.saveText {
-    font-size : 8px;
+.textBox {
+    width: 228px;
 }

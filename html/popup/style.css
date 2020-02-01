@@ -1,0 +1,11 @@
+html {
+    font-family : 'Roboto', sans-serif;
+}
+
+.main {
+    font-size : 18px;     
+}
+
+.choice, .save, .saveText {
+    font-size : 10px;
+}
