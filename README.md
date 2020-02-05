@@ -5,7 +5,7 @@ It renames tab titles.*
 ## 
 It has a settings menu when you click on it.
 ## 
-It has a bigger settings menu in the chrome://extentions page*
+It has a bigger settings menu in the chrome://extentions page
 ## 
 It's a thing
 ## 
