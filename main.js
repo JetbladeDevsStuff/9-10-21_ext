@@ -1,23 +1,16 @@
 // main.js of 9 + 10 = 21
-// This whole thing will wait a bit for jQuery to load
+// This whole thing will wait a half a second for jQuery to load
 setTimeout(() => {
     var title = $("title").html();
-    // We will write a function that will check if the wanted tab title or 
-    // extention "on/off" state has been changed every 5 seconds
-
+    // We will write a function that will check if the extention "on/off" 
+    // state has been changed (passing null into the get function 
+    // returns everything in storage)
     function getExtentionStorage() {
-        chrome.storage.local.get([null], (storage) => {
-            console.log(storage)
+        chrome.storage.local.get(null, (data) => {
+            console.log(data);
+            return(data.key);
         })
     }
 
-    function setTabTitle() {
-        setTimeout(() => {
-            
-        }, 5000);
-    }
-
-    setTimeout(() => {
-        getExtentionStorage();
-    }, 3000);
-}, 1000);
+    console.log(getExtentionStorage())
+}, 500);
