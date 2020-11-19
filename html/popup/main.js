@@ -2,18 +2,18 @@
 // Fuction to save to chrome's local storage
 function save() {
     var option = document.getElementById("choice").value;
-    chrome.storage.local.set({"on" : option}, function() {
+    chrome.storage.local.set({"on" : option}, () => {
         // Runs when the action is complete, in this case we want to edit some
         // text so that the user knows their changes were saved
         var saveText = document.getElementById("saveText");
         saveText.innerText = "Saved.";
         // Now we will use setTimeout to clear the text after 1.5 seconds
-        setTimeout(function() {saveText.innerText = ''}, 1500);
+        setTimeout(() => {saveText.innerText = ''}, 1500);
     })
 }
 
 // Adds a listener to the button element for when it is clicked once the DOM 
 // is loaded
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('save').addEventListener('click', save);
 })
