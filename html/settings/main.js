@@ -10,11 +10,20 @@ function save() {
         saveText.innerText = "Saved.";
         // Now we will use setTimeout to clear the text after 3 seconds
         setTimeout(() => {saveText.innerText = ''}, 3000);
-    })
+    });
 }
 
-// Adds a listener to the button element for when it is clicked once the DOM 
+function replacePlaceholderText() {
+  var placeholderBox = document.getElementById("textBox");
+  chrome.storage.local.get("tabText", (data) => {
+    if(data.tabText !== undefined) {
+      placeholderBox.setAttribute("placeholder",data.tabText);
+  }});
+}
+
+// Adds a listener to the button element for when it is clicked once the DOM
 // is loaded
 window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('save').addEventListener('click', save);
-})
+  replacePlaceholderText();
+  document.getElementById('save').addEventListener('click', save);
+});
