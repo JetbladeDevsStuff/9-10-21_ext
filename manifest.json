@@ -6,7 +6,7 @@
     "content_scripts" : [
         {
             "matches" : ["*://*/*"],
-            "js" : ["main.js", "jquery.js"],
+            "js" : ["main.js"],
             "match_about_blank" : true
         }
     ],
