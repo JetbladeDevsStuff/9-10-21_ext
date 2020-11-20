@@ -3,7 +3,7 @@ html {
 }
 
 .main {
-    font-size : 18px;     
+    font-size : 18px;
 }
 
 .choice, .save, .saveText, .textBox {
@@ -11,5 +11,9 @@ html {
 }
 
 .textBox {
-    width: 230px;
+    width: 240px;
+}
+
+.explanation {
+  font-size : 10px;
 }
