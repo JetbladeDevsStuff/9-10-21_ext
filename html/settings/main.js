@@ -3,7 +3,8 @@
 function save() {
     var option = document.getElementById("choice").value;
     var text = document.getElementById("textBox").value;
-    chrome.storage.local.set({"on" : option, "tabText" : text}, () => {
+    var d_Option = document.getElementById("choice_debug").value;
+    chrome.storage.local.set({"on" : option, "tabText" : text, "debug" : d_Option}, () => {
         // Runs when the action is complete, in this case we want to edit some
         // text so that the user knows their changes were saved
         var saveText = document.getElementById("saveText");
@@ -13,6 +14,7 @@ function save() {
     });
 }
 
+// a function to replace the placeholder text
 function replacePlaceholderText() {
   var placeholderBox = document.getElementById("textBox");
   chrome.storage.local.get("tabText", (data) => {
